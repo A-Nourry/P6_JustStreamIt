@@ -1,0 +1,7 @@
+@mixin category-format {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: auto;
+    padding: 5px;
+}

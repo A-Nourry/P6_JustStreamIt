@@ -1,0 +1,50 @@
+body {
+  width: auto;
+  color: white;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 4px/4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+#bestMovie {
+  font-size: 1em;
+  width: 500px;
+  height: auto;
+  border: 1px white solid;
+  margin: 15px;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: auto;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

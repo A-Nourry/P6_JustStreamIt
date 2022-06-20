@@ -1,0 +1,22 @@
+@import "../utils/mixins";
+
+#sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+#bestMovie {
+    font-size: 1em;
+    width: 500px;
+    height: auto;
+    border: 1px white solid;
+    margin: 15px;
+  }
+
+.movies {
+    @include category-format;
+}

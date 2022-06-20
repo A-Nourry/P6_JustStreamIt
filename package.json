@@ -1,0 +1,19 @@
+{
+  "name": "p6_juststreamit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Nourry/P6_JustStreamIt.git"
+  },
+  "author": "Andrew Nourry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Nourry/P6_JustStreamIt/issues"
+  },
+  "homepage": "https://github.com/A-Nourry/P6_JustStreamIt#readme"
+}
