@@ -76,10 +76,6 @@ window.onclick = function (event) {
 
 // HTTP requests, API GET
 
-const urlSortedByScore = "http://localhost:8000/api/v1/titles/?sort_by=-imdb_score";
-const bestMovie = "http://localhost:8000/api/v1/titles/1508669";
-const image = "https://m.media-amazon.com/images/M/MV5BNDEyYTA5OWEtYjNiYS00MGZlLThjYzEtMTc1Zjk2NDRmZmYxXkEyXkFqcGdeQXVyNzIwNTQyMw@@._V1_UY268_CR1,0,182,268_AL_.jpg";
-
 fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score")
   .then(function(res) {
     if (res.ok) {
@@ -87,8 +83,133 @@ fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score")
     }
   })
   .then(function(value) {
+    document.getElementById("movie_title").innerText = value.results[0].title;
+    document.getElementById("movie_genre").innerText = value.results[0].genres;
+    document.getElementById("movie_release_date").innerText = value.results[0].year;
+    document.getElementById("movie_imdb_score").innerText = value.results[0].imdb_score;
+    document.getElementById("movie_actors").innerText = value.results[0].actors;
+    document.getElementById("movie_image").src = value.results[0].image_url;
     document.getElementById("banner__img").src = value.results[0].image_url;
+    document.getElementById("top_ranked_img_1").src = value.results[0].image_url;
+    document.getElementById("top_ranked_img_2").src = value.results[1].image_url;
+    document.getElementById("top_ranked_img_3").src = value.results[2].image_url;
+    document.getElementById("top_ranked_img_4").src = value.results[3].image_url;
   })
   .catch(function(err) {
     // Une erreur est survenue
   });
+
+
+fetch("http://localhost:8000/api/v1/titles/?page=2&sort_by=-imdb_score")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("top_ranked_img_5").src = value.results[0].image_url;
+    document.getElementById("top_ranked_img_6").src = value.results[1].image_url;
+    document.getElementById("top_ranked_img_7").src = value.results[2].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+
+// get data for the first category
+fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=Sci-Fi")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_1_img_1").src = value.results[0].image_url;
+    document.getElementById("cat_1_img_2").src = value.results[1].image_url;
+    document.getElementById("cat_1_img_3").src = value.results[2].image_url;
+    document.getElementById("cat_1_img_4").src = value.results[3].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+fetch("http://localhost:8000/api/v1/titles/?genre=Sci-Fi&page=2&sort_by=-imdb_score")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_1_img_5").src = value.results[0].image_url;
+    document.getElementById("cat_1_img_6").src = value.results[1].image_url;
+    document.getElementById("cat_1_img_7").src = value.results[2].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+
+// get data for the second category
+fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=Mystery")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_2_img_1").src = value.results[0].image_url;
+    document.getElementById("cat_2_img_2").src = value.results[1].image_url;
+    document.getElementById("cat_2_img_3").src = value.results[2].image_url;
+    document.getElementById("cat_2_img_4").src = value.results[3].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+fetch("http://localhost:8000/api/v1/titles/?genre=Mystery&page=2&sort_by=-imdb_score")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_2_img_5").src = value.results[0].image_url;
+    document.getElementById("cat_2_img_6").src = value.results[1].image_url;
+    document.getElementById("cat_2_img_7").src = value.results[2].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+
+// get data for the third category
+fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=Fantasy")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_3_img_1").src = value.results[0].image_url;
+    document.getElementById("cat_3_img_2").src = value.results[1].image_url;
+    document.getElementById("cat_3_img_3").src = value.results[2].image_url;
+    document.getElementById("cat_3_img_4").src = value.results[3].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
+
+fetch("http://localhost:8000/api/v1/titles/?genre=Fantasy&page=2&sort_by=-imdb_score")
+.then(function(res) {
+    if (res.ok) {
+    return res.json();
+    }
+})
+.then(function(value) {
+    document.getElementById("cat_3_img_5").src = value.results[0].image_url;
+    document.getElementById("cat_3_img_6").src = value.results[1].image_url;
+    document.getElementById("cat_3_img_7").src = value.results[2].image_url;
+})
+.catch(function(err) {
+    // Une erreur est survenue
+});
