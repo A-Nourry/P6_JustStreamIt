@@ -91,29 +91,34 @@
     justify-content: center;
 }
 
-#best_movie {
+#banner {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 25px;
     height: 268px;
     width: 944px;
     border-radius: 5px;
-    background: url('https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg') no-repeat;
     position: relative;
     box-shadow: 0px 4px 4px $main-color;
-}
 
-#banner_description {
-    position: absolute;
-    bottom: 0;
-    border-radius: 0px 0px 5px 5px;
-    width: 99.8%;
-    height: 33px;
-    padding-top: 15px;
-    padding-left: 4px;
-    background-color: rgba(98,117,127,0.8);
-    color: white;
-    font-size: 1em; 
+  &__description {
+      position: absolute;
+      bottom: 0;
+      border-radius: 0px 0px 5px 5px;
+      width: 99.8%;
+      height: 33px;
+      padding-top: 15px;
+      padding-left: 4px;
+      background-color: rgba(98,117,127,0.8);
+      color: white;
+      font-size: 1em; 
+      & h1 {
+        position:absolute;
+        bottom: 2px;
+        left: 10px;
+        font-size: 1rem;
+      }
+  }
 }
 
 /* modal window */
