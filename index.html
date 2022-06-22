@@ -31,42 +31,40 @@
 
         <div class="modal-content">
             <span class="close">&times;</span>
+            <h1 id="movie_title"></h1>
+            <img id="movie_image" src="" />
             <table id="movie_details">
                 <tr>
-                    <td>Titre : </td>
-                    <td>test</td>
-                </tr>
-                <tr>
                     <td>Genre : </td>
-                    <td>test</td>
+                    <td id="movie_genre">test</td>
                 </tr>
                 <tr>
                     <td>Date de sortie : </td>
-                    <td>test</td>
+                    <td id="movie_release_date">test</td>
                 </tr>
                 <tr>
                     <td>Rated : </td>
-                    <td>test</td>
+                    <td id="movie_rank">test</td>
                 </tr>
                 <tr>
                     <td>Score Imdb : </td>
-                    <td>test</td>
+                    <td id="movie_imdb_score">test</td>
                 </tr>
                 <tr>
                     <td>Acteurs : </td>
-                    <td>test</td>
+                    <td id="movie_actors">test</td>
                 </tr>
                 <tr>
                     <td>durée : </td>
-                    <td>test</td>
+                    <td id="movie_duration">test</td>
                 </tr>
                 <tr>
                     <td>Résultat au Box Office : </td>
-                    <td>test</td>
+                    <td id="movie_box_office">test</td>
                 </tr>
                 <tr>
                     <td>Synopsis : </td>
-                    <td>test</td>
+                    <td id="movie_resume">test</td>
                 </tr>
             </table>
         </div>
@@ -86,38 +84,37 @@
             <ul class="product-list js-product-list">
                 <li class="product-list__item">
                     <div data-slide="1" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_1" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="2" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_2" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="3" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_3" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="4" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_4" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="5" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_5" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="6" class="product">
-                        <span><img
-                                src="https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg" /></span>
+                        <span><img id="top_ranked_img_6" src="" /></span>
+                    </div>
+                </li>
+                <li class="product-list__item">
+                    <div data-slide="7" class="product">
+                        <span><img id="top_ranked_img_7" src="" /></span>
                     </div>
                 </li>
             </ul>
@@ -125,7 +122,7 @@
     </div>
 
     <div class="carousel js-product-carousel">
-        <h1 id="cat_titles">Catégorie 1</h1>
+        <h1 id="cat_titles">Catégorie Sci-Fi</h1>
         <div class="carousel__view">
             <span class="carousel__control js-carousel-prev"><i class="icon"><img
                         src="public/img/prev.png" /></i></span>
@@ -134,32 +131,37 @@
             <ul class="product-list js-product-list">
                 <li class="product-list__item">
                     <div data-slide="1" class="product">
-                        <span>1</span>
+                        <span><img id="cat_1_img_1" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="2" class="product">
-                        <span>2</span>
+                        <span><img id="cat_1_img_2" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="3" class="product">
-                        <span>3</span>
+                        <span><img id="cat_1_img_3" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="4" class="product">
-                        <span>4</span>
+                        <span><img id="cat_1_img_4" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="5" class="product">
-                        <span>5</span>
+                        <span><img id="cat_1_img_5" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="6" class="product">
-                        <span>6</span>
+                        <span><img id="cat_1_img_6" src="" /></span>
+                    </div>
+                </li>
+                <li class="product-list__item">
+                    <div data-slide="7" class="product">
+                        <span><img id="cat_1_img_7" src="" /></span>
                     </div>
                 </li>
             </ul>
@@ -167,7 +169,7 @@
     </div>
 
     <div class="carousel js-product-carousel">
-        <h1 id="cat_titles">Catégorie 2</h1>
+        <h1 id="cat_titles">Catégorie Mystères</h1>
         <div class="carousel__view">
             <span class="carousel__control js-carousel-prev"><i class="icon"><img
                         src="public/img/prev.png" /></i></span>
@@ -176,32 +178,37 @@
             <ul class="product-list js-product-list">
                 <li class="product-list__item">
                     <div data-slide="1" class="product">
-                        <span>1</span>
+                        <span><img id="cat_2_img_1" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="2" class="product">
-                        <span>2</span>
+                        <span><img id="cat_2_img_2" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="3" class="product">
-                        <span>3</span>
+                        <span><img id="cat_2_img_3" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="4" class="product">
-                        <span>4</span>
+                        <span><img id="cat_2_img_4" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="5" class="product">
-                        <span>5</span>
+                        <span><img id="cat_2_img_5" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="6" class="product">
-                        <span>6</span>
+                        <span><img id="cat_2_img_6" src="" /></span>
+                    </div>
+                </li>
+                <li class="product-list__item">
+                    <div data-slide="7" class="product">
+                        <span><img id="cat_2_img_7" src="" /></span>
                     </div>
                 </li>
             </ul>
@@ -209,7 +216,7 @@
     </div>
 
     <div class="carousel js-product-carousel">
-        <h1 id="cat_titles">Catégorie 3</h1>
+        <h1 id="cat_titles">Catégorie Fantastique</h1>
         <div class="carousel__view">
             <span class="carousel__control js-carousel-prev"><i class="icon"><img
                         src="public/img/prev.png" /></i></span>
@@ -218,32 +225,37 @@
             <ul class="product-list js-product-list">
                 <li class="product-list__item">
                     <div data-slide="1" class="product">
-                        <span>1</span>
+                        <span><img id="cat_3_img_1" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="2" class="product">
-                        <span>2</span>
+                        <span><img id="cat_3_img_2" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="3" class="product">
-                        <span>3</span>
+                        <span><img id="cat_3_img_3" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="4" class="product">
-                        <span>4</span>
+                        <span><img id="cat_3_img_4" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="5" class="product">
-                        <span>5</span>
+                        <span><img id="cat_3_img_5" src="" /></span>
                     </div>
                 </li>
                 <li class="product-list__item">
                     <div data-slide="6" class="product">
-                        <span>6</span>
+                        <span><img id="cat_3_img_6" src="" /></span>
+                    </div>
+                </li>
+                <li class="product-list__item">
+                    <div data-slide="7" class="product">
+                        <span><img id="cat_3_img_7" src="" /></span>
                     </div>
                 </li>
             </ul>
