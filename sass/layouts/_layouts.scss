@@ -1,22 +1,156 @@
-@import "../utils/mixins";
 
-#sections {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.carousel {
+  margin: 20px;
+  &__view {
+    width: $carousel-width;
+    height: $carousel-height;
+    background: white;
+    //border: solid 1px red;
+    box-shadow: 0 1px 8px $main-color;
+    margin: auto;
+    overflow: hidden;
     position: relative;
-    flex-wrap: wrap;
-}
-
-#bestMovie {
-    font-size: 1em;
-    width: 500px;
-    height: auto;
-    border: 1px white solid;
-    margin: 15px;
   }
-
-.movies {
-    @include category-format;
+  &__control {
+    position: absolute;
+    z-index: 1;
+    height: $carousel-height;
+    width: 70px;
+    background-color: $carousel-control-color;
+    transition: background-color .3s;
+    display: table;
+    .icon {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+    &:hover {
+      background-color: darken($carousel-control-color, 25);
+    }
+    &:first-of-type {
+      left: 0;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+  }
 }
+.product-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  transition: transform .3s;
+  transform: translateX(0px);
+  list-style: none;
+  height: $carousel-height;
+  
+  //border: solid 1px black;
+  
+  &__item {
+    width: 200px;
+    height: $carousel-height;
+    //border: solid 1px green;
+    display: inline-block;
+  }
+}
+
+.product {
+  display: table;
+  height: 100%;
+  width: 100%;
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+  }
+  
+  &[data-slide="1"] {
+    background-color: white;
+  }
+  &[data-slide="2"] {
+    background-color: white;
+  }
+  &[data-slide="3"] {
+    background-color: white;
+  }
+  &[data-slide="4"] {
+    background-color: white;
+  }
+  &[data-slide="5"] {
+    background-color: white;
+  }
+  &[data-slide="6"] {
+    background-color: white;
+  }
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#best_movie {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    height: 268px;
+    width: 944px;
+    border-radius: 5px;
+    background: url('https://m.media-amazon.com/images/M/MV5BNTY4ZDk5MzYtNjk2Zi00ZWY3LTgwZjUtNDc5MWEzMWFlOTQzXkEyXkFqcGdeQXVyNjU1MTEwMjI@._V1_UY268_CR1,0,182,268_AL_.jpg') no-repeat;
+    position: relative;
+    box-shadow: 0px 4px 4px $main-color;
+}
+
+#banner_description {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.8%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(98,117,127,0.8);
+    color: white;
+    font-size: 1em; 
+}
+
+/* modal window */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: $main-color;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    z-index: 0;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
