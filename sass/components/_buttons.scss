@@ -1,0 +1,16 @@
+#myBtn {
+    background-color: #fc4743;
+    position: absolute;
+    right: 7px;
+    bottom: 7px;
+    color: white;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0;
+    padding: 7px 25px 7px 25px;
+    text-align: center;
+    border-radius: 10px/10px;
+    &:hover {
+        background-color: darken(#fc4743, 15);
+    }
+}
