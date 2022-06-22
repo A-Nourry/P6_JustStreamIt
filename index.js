@@ -46,11 +46,11 @@ function carouselize(carousel) {
     });
 }
 
-// modal window
 
+// modal window
 let modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+// Open button
 let btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
@@ -72,3 +72,23 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+// HTTP requests, API GET
+
+const urlSortedByScore = "http://localhost:8000/api/v1/titles/?sort_by=-imdb_score";
+const bestMovie = "http://localhost:8000/api/v1/titles/1508669";
+const image = "https://m.media-amazon.com/images/M/MV5BNDEyYTA5OWEtYjNiYS00MGZlLThjYzEtMTc1Zjk2NDRmZmYxXkEyXkFqcGdeQXVyNzIwNTQyMw@@._V1_UY268_CR1,0,182,268_AL_.jpg";
+
+fetch("http://localhost:8000/api/v1/titles/?sort_by=-imdb_score")
+  .then(function(res) {
+    if (res.ok) {
+      return res.json();
+    }
+  })
+  .then(function(value) {
+    document.getElementById("banner__img").src = value.results[0].image_url;
+  })
+  .catch(function(err) {
+    // Une erreur est survenue
+  });
