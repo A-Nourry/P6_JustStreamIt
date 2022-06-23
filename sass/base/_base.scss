@@ -1,7 +1,7 @@
 body {
-    width: auto;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: auto;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer {
@@ -11,36 +11,40 @@ footer {
 }
 
 #header {
-    height: 50px;
-    width: 100%;
-    position: absolute;
-    background-color: $main-color;
-    margin-bottom: 100px;
-    top: 0;
-    left: 0;
-    &__title {
-      color: white;
-      font-size: 2rem;
-      text-align: center;
-    }
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  background-color: $main-color;
+  top: 0;
+  left: 0;
+
+  &__title {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    bottom: 1;
+  }
 }
 
 #cat_titles {
-    color: $main-color;
-    text-align: center;
-    font-size: 1.2rem;
+  color: $main-color;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 ::-webkit-scrollbar {
-	width: 12px;
+  width: 12px;
 }
+
 ::-webkit-scrollbar-track {
   background: white;
 }
+
 ::-webkit-scrollbar-thumb {
   background: $main-color;
   border-radius: 4px/4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: darken($main-color, 15);
 }

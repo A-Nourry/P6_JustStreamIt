@@ -10,7 +10,13 @@
     padding: 7px 25px 7px 25px;
     text-align: center;
     border-radius: 10px/10px;
+
     &:hover {
         background-color: darken(#fc4743, 15);
     }
+}
+
+.img_btn:hover {
+    border: 3px $main-color solid;
+    border-radius: 4px/4px;
 }

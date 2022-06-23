@@ -1,6 +1,6 @@
-
 .carousel {
   margin: 20px;
+
   &__view {
     width: $carousel-width;
     height: $carousel-height;
@@ -11,6 +11,7 @@
     overflow: hidden;
     position: relative;
   }
+
   &__control {
     position: absolute;
     z-index: 1;
@@ -19,22 +20,27 @@
     background-color: $carousel-control-color;
     transition: background-color .3s;
     display: table;
+
     .icon {
       display: table-cell;
       vertical-align: middle;
       text-align: center;
     }
+
     &:hover {
       background-color: darken($carousel-control-color, 25);
     }
+
     &:first-of-type {
       left: 0;
     }
+
     &:last-of-type {
       right: 0;
     }
   }
 }
+
 .product-list {
   position: absolute;
   margin: 0;
@@ -43,9 +49,9 @@
   transform: translateX(0px);
   list-style: none;
   height: $carousel-height;
-  
+
   //border: solid 1px black;
-  
+
   &__item {
     width: 200px;
     height: $carousel-height;
@@ -58,6 +64,7 @@
   display: table;
   height: 100%;
   width: 100%;
+
   span {
     display: table-cell;
     vertical-align: middle;
@@ -65,98 +72,125 @@
     color: white;
     font-size: 50px;
   }
-  
+
   &[data-slide="1"] {
     background-color: white;
   }
+
   &[data-slide="2"] {
     background-color: white;
   }
+
   &[data-slide="3"] {
     background-color: white;
   }
+
   &[data-slide="4"] {
     background-color: white;
   }
+
   &[data-slide="5"] {
     background-color: white;
   }
+
   &[data-slide="6"] {
     background-color: white;
   }
 }
 
 #container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #banner {
-    text-align: center;
-    background-color: black;
-    margin-top: 100px;
-    margin-bottom: 25px;
-    height: 268px;
-    width: 944px;
-    border-radius: 5px;
-    position: relative;
-    box-shadow: 0px 4px 4px $main-color;
+  text-align: center;
+  background-color: black;
+  margin-top: 100px;
+  margin-bottom: 25px;
+  height: 268px;
+  width: 600px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 4px 4px $main-color;
+
+  &__movie_title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+  }
+
+  &__movie_description {
+    width: 200px;
+    position: absolute;
+    top: 75px;
+    left: 50px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+  }
 
   &__description {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(98, 117, 127, 0.8);
+    color: white;
+    font-size: 1em;
+
+    & h1 {
       position: absolute;
-      bottom: 0;
-      border-radius: 0px 0px 5px 5px;
-      width: 99.8%;
-      height: 33px;
-      padding-top: 15px;
-      padding-left: 4px;
-      background-color: rgba(98,117,127,0.8);
-      color: white;
-      font-size: 1em; 
-      & h1 {
-        position:absolute;
-        bottom: 2px;
-        left: 10px;
-        font-size: 1rem;
-      }
+      bottom: 2px;
+      left: 10px;
+      font-size: 1rem;
+    }
   }
 }
 
 /* modal window */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: $main-color;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    z-index: 0;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: $main-color;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 75%;
+  z-index: 0;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
