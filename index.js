@@ -260,8 +260,10 @@ function getModalData(id) {
             document.getElementById("movie_release_date").innerText = value.year;
             document.getElementById("movie_rated").innerText = value.rated;
             document.getElementById("movie_imdb_score").innerText = value.imdb_score + "/10";
+            document.getElementById("movie_directors").innerText = value.directors;
             document.getElementById("movie_actors").innerText = value.actors;
             document.getElementById("movie_duration").innerText = value.duration + " min";
+            document.getElementById("movie_countries").innerText = value.countries;
             document.getElementById("movie_box_office").innerText = value.worldwide_gross_income + " $";
             document.getElementById("movie_resume").innerText = value.long_description;
             document.getElementById("movie_image").src = value.image_url;
